@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiPopupInMemory.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            
+            <Label
+                Text="Hello, World!"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+
+            <Button
+                Text="Show Popup" 
+                Clicked="ShowTestPopup"
+                HorizontalOptions="Fill" />
+
+            <Button
+                Text="Push Page" 
+                Clicked="PushPage"
+                HorizontalOptions="Fill" />
+
+            <Button
+                Text="Toggle Fix" 
+                Clicked="ToggleFix"
+                HorizontalOptions="Fill" />
+
+            <Label x:Name="FixEnabledLabel"/>
+
+            <Button
+                Text="GC.Collect" 
+                BackgroundColor="Red"
+                Clicked="CollectGarbage"
+                HorizontalOptions="Fill" />
+            
+            <Label x:Name="ReferencesAliveLabel"/>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
